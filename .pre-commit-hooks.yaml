@@ -1,12 +1,10 @@
 - id: gradle-checkstyle-main
   name: gradle checkstyleMain
   description: Run gradle checkstyle for main
-  entry: gradle-checkstyle-main
+  entry: pre_commit_hooks/gradle-checkstyle-main.sh
   language: script
-  files: \.java$
 - id: gradle-checkstyle-test
   name: gradle checkstyleTest
   description: Run gradle checkstyle for test
-  entry: gradle-checkstyle-test
+  entry: pre_commit_hooks/gradle-checkstyle-test.sh
   language: script
-  files: \.java$
