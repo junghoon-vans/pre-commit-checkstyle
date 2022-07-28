@@ -1,0 +1,12 @@
+- id: gradle-checkstyle-main
+  name: gradle checkstyleMain
+  description: Run gradle checkstyle for main
+  entry: gradle-checkstyle-main
+  language: script
+  files: \.java$
+- id: gradle-checkstyle-test
+  name: gradle checkstyleTest
+  description: Run gradle checkstyle for test
+  entry: gradle-checkstyle-test
+  language: script
+  files: \.java$
