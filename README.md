@@ -7,7 +7,9 @@ Requirements
 ---
 
 - `pre-commit`
-- `gradle project` installed checkstyle
+- git project
+  - with `gradle` checkstyle plugin
+  - with `maven` checkstyle plugin
 
 Install
 ---
@@ -17,10 +19,12 @@ Install
 ```yaml
 repos:
 - repo: https://github.com/junghoon-vans/pre-commit-checkstyle
-    rev: v1.0.0
+    rev: v1.1.0
     hooks:
     - id: gradle-checkstyle-main
     - id: gradle-checkstyle-test
+    - id: maven-checkstyle
+    - id: maven-checkstyle-report
 ```
 
 2. Run `pre-commit install` command.
@@ -30,8 +34,18 @@ Hooks
 
 ### `gradle-checkstyle-main`
 
-Run `checkstyleMain` using gradle
+- Runs Checkstyle against the `production Java source` files.
+- Generates an `HTML report` on any violations.
 
 ### `gradle-checkstyle-test`
 
-Run `checkstyleTest` using gradle
+- Runs Checkstyle against the `test Java source` files.
+- Generates an `HTML report` on any violations.
+
+### `maven-checkstyle`
+
+- Runs Checkstyle against `all Java source` files.
+
+### `maven-checkstyle-report`
+
+- Generates an `HTML report` on any violations.
