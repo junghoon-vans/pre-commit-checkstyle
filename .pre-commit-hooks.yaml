@@ -1,10 +1,24 @@
+---
 - id: gradle-checkstyle-main
   name: gradle checkstyleMain
-  description: Run gradle checkstyle for main
+  description: Runs Checkstyle against the production Java source files and generates an HTML report on any violations.
   entry: pre_commit_hooks/gradle-checkstyle-main.sh
   language: script
+
 - id: gradle-checkstyle-test
   name: gradle checkstyleTest
-  description: Run gradle checkstyle for test
+  description: Runs Checkstyle against the test Java source files and generates an HTML report on any violations.
   entry: pre_commit_hooks/gradle-checkstyle-test.sh
+  language: script
+
+- id: maven-checkstyle
+  name: maven checkstyle
+  description: Runs Checkstyle against all Java source files.
+  entry: pre_commit_hooks/maven-checkstyle.sh
+  language: script
+
+- id: maven-checkstyle-report
+  name: maven checkstyle report
+  description: Generates an HTML report on any violations.
+  entry: pre_commit_hooks/maven-checkstyle-report.sh
   language: script
