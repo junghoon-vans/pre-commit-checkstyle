@@ -19,8 +19,9 @@ Install
 ```yaml
 repos:
 - repo: https://github.com/junghoon-vans/pre-commit-checkstyle
-    rev: v1.1.0
+    rev: v1.2.0
     hooks:
+    - id: gradle-checkstyle
     - id: gradle-checkstyle-main
     - id: gradle-checkstyle-test
     - id: maven-checkstyle
@@ -31,6 +32,10 @@ repos:
 
 Hooks
 ---
+
+### `gradle-checkstyle`
+
+- Runs Checkstyle against `all Java source` files.
 
 ### `gradle-checkstyle-main`
 
