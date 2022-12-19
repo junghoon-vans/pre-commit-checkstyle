@@ -1,6 +1,10 @@
 pre-commit-checkstyle
 ===
 
+> **Warning**
+> This repository is no longer managed. Please use [checkstyle-cli](https://github.com/junghoon-vans/checkstyle-cli) instead.
+
+
 pre-commit hooks for checkstyle
 
 Requirements
